@@ -19,3 +19,4 @@ if __name__ == '__main__':
     total = trip1 + trip2
     
     print (total.days)
+    
