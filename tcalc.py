@@ -6,6 +6,8 @@ Date format  : day.month.fullYear
 """
 from datetime import datetime 
 
+# TODO: Realize file reasding from CSV File format . May be add .xls format reading.
+
 if __name__ == '__main__':
     date_in = '28.11.2020'
     date_out ='09.05.2021'
