@@ -1,3 +1,9 @@
+"""Calculates tax rates available period
+
+This script  alows automaticaly calculate available resident periods
+You have to suply file named triplog.csv , with next structure: Step in date , Step  out date
+Date format  : day.month.fullYear 
+"""
 from datetime import datetime 
 
 if __name__ == '__main__':
