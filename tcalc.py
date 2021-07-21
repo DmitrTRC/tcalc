@@ -15,12 +15,12 @@ from typing import List, Tuple
 def dates_from_csv(
     file_name: str = "triplog.csv", delimiter=":"
 ) -> List[Tuple[datetime, datetime]]:
+    dates_array = []
     with open(file_name, "r") as csv_file:
         date_reader = csv.reader(csv_file, delimiter=delimiter)
         for index, row in enumerate(date_reader):
-            print(index)
-            print(row)
-
+            dates_array.append((row[0], row[1]))
+    return dates_array
 
 def get_trip_days():
     pass
