@@ -12,29 +12,21 @@ from typing import List, Tuple
 # TODO: Realize file reasding from CSV File format . May be add .xls format reading.
 
 
-def data_from_csv(
-    f_name: str = "triplog.csv", delimiter=":"
+def dates_from_csv(
+    file_name: str = "triplog.csv", delimiter=":"
 ) -> List[Tuple[datetime, datetime]]:
-    pass
+    with open(file_name, "r") as csv_file:
+        date_reader = csv.reader(csv_file, delimiter=delimiter)
+        for index, row in enumerate(date_reader):
+            print(index)
+            print(row)
 
 
 def get_trip_days():
     pass
 
+
 if __name__ == "__main__":
-    date_in = "28.11.2020"
-    date_out = "09.05.2021"
+    dates_from_csv()
 
-    date_in2 = "17.06.2021"
-    date_out2 = "07.07.2021"
-
-    trip1 = datetime.strptime(date_out, "%d.%m.%Y") - datetime.strptime(
-        date_in, "%d.%m.%Y"
-    )
-    trip2 = datetime.strptime(date_out2, "%d.%m.%Y") - datetime.strptime(
-        date_in2, "%d.%m.%Y"
-    )
-
-    total = trip1 + trip2
-
-    print(total.days)
+    # trip1 = datetime.strptime(date_out, "%d.%m.%Y")
