@@ -4,23 +4,22 @@ This script  alows automaticaly calculate available resident periods
 You have to suply file named triplog.csv , with next structure: Step in date , Step  out date
 Date format  : day.month.fullYear 
 """
+import csv
 from datetime import datetime
-from typing import List, Tuples
+from typing import List, Tuple
 
 
 # TODO: Realize file reasding from CSV File format . May be add .xls format reading.
 
 
-def data_from_csv (f_name : str = "triplog.csv"):
+def data_from_csv(
+    f_name: str = "triplog.csv", delimiter=":"
+) -> List[Tuple[datetime, datetime]]:
     pass
+
 
 def get_trip_days():
     pass
-
-
-if __name__ == "__main__":
-    date_in = "28.11.2020"
-    date_out = "09.05.2021"
 
 if __name__ == "__main__":
     date_in = "28.11.2020"
